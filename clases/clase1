@@ -1,0 +1,6 @@
+banda = input("Guns and Roses: ")
+anio_formacion = int(input("1995: "))
+anios_activa = 2026 - anio_formacion
+
+print(f"{banda} lleva {anios_activa} años en el escenario")
+
