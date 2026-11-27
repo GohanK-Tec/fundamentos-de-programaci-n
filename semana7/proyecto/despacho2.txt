@@ -1,0 +1,5 @@
+Fecha: 23/11/2026 | Fecha=(23, 11, 2026)
+Descripción: nanda
+[23/11/2026 | Fecha=(23, 11, 2026)] Operador: Vani | Cant: 12 | Precio: $65.00 | Desc: $0.00 | IVA: $124.80 | Total: $904.80 | StockRest: 66
+[12/02/2026 | Fecha=(12, 2, 2026)] Operador: Vania | Cant: 23 | Precio: $45.00 | Desc: $0.00 | IVA: $165.60 | Total: $1200.60 | StockRest: 356
+[26/11/2026 | Fecha=(26, 11, 2026)] Operador: Gohan | Cant: 12 | Precio: $76.00 | Desc: $0.00 | IVA: $145.92 | Total: $1057.92 | StockRest: 55
