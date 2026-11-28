@@ -1,0 +1,5 @@
+Fecha: 12/07/2026 | Fecha=(12, 7, 2026)
+Descripción: restaurante mcdonalds
+    [27/11/2026 | Fecha=(27, 11, 2026)] Operador: Gohan | Cant: 489 | Precio: $87.00 | Desc: $6381.45 | IVA: $5785.85 | Total: $41947.40 | StockRest: 11
+[27/11/2026 | Fecha=(27, 11, 2026)] Operador: Gohan | Cant: 376 | Precio: $56.00 | Desc: $3158.40 | IVA: $2863.62 | Total: $20761.22 | StockRest: 124
+[27/11/2026 | Fecha=(27, 11, 2026)] Operador: Gohan | Cant: 32 | Precio: $345.00 | Desc: $552.00 | IVA: $1678.08 | Total: $12166.08 | StockRest: 24

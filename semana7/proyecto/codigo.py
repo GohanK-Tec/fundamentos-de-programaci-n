@@ -1,18 +1,17 @@
-"""
-Proyecto: KLUU FOOD SERVICES — Control de Despachos e Inventario con Archivos
-Curso: Fundamentos de Programación (Semana 7 - Entrega Final)
-Descripción: Gestiona despachos de lotes de insumos alimentarios validando
-             stock disponible (0 a 500), cantidad (1 a 500 y <= stock),
-             precio (> 0 y <= $1000), descuentos por volumen (0%, 5%, 10%, 15%)
-             e IVA del 16%, guardando registros en archivos .txt con fecha
-             en tupla (año 2026).
-"""
+#Gohan Kaleb Romero Coronado
+# Proyecto: KLUU FOOD SERVICES — Control de Despachos e Inventario con Archivos
+# Curso: Fundamentos de Programación (Semana 7 - Entrega Final)
+#Descripción: Gestiona despachos de lotes de insumos alimentarios validando
+#stock disponible (0 a 500), cantidad (1 a 500 y <= stock),
+#precio (> 0 y <= $1000), descuentos por volumen (0%, 5%, 10%, 15%)
+#e IVA del 16%, guardando registros en archivos .txt con fecha
+#en tupla (año 2026).
 
 import os
 import time
 
 
-# Carpeta donde está guardado este archivo .py (con respaldo si se corre sin __file__)
+# Carpeta donde está guardado este archivo .py 
 try:
     CARPETA_PROYECTO = os.path.dirname(os.path.abspath(__file__))
 except NameError:
@@ -28,12 +27,12 @@ MENU_KLUU = [
 
 
 def ruta_completa(nombre_archivo):
-    """Une la carpeta del proyecto con el nombre del archivo .txt."""
+    #Une la carpeta del proyecto con el nombre del archivo .txt
     return os.path.join(CARPETA_PROYECTO, nombre_archivo)
 
 
 def pantalla_carga(segundos=2):
-    """Muestra una barra de carga animada en consola (máximo 5 segundos)."""
+    #Muestra una barra de carga animada en consola (máximo 5 segundos)
     if segundos > 5:
         segundos = 5
     elif segundos <= 0:
@@ -50,13 +49,13 @@ def pantalla_carga(segundos=2):
 
 
 def solicitar_usuario_bienvenida():
-    """Pide el nombre o nickname del usuario y muestra un saludo dinámico."""
+    #Pide el nombre o nickname del usuario y muestra un saludo dinámico.
     while True:
         nombre = input("Ingresa tu nombre o nickname: ").strip()
         if nombre != "":
             nombre_formateado = nombre.title()
             break
-        print("Advertencia: el nombre no puede estar vacío.", flush=True)
+        print("Advertencia!! el nombre no puede estar vacío.", flush=True)
 
     bienvenida = (
         "\n==========================================\n"
@@ -70,7 +69,7 @@ def solicitar_usuario_bienvenida():
 
 
 def simular_inactividad():
-    """Simula 10 minutos de inactividad con for y valida respuesta si/no."""
+    #Simula 10 minutos de inactividad con for y valida respuesta si/no
     print("\nNo ingresaste opción. Simulando 10 minutos de inactividad...", flush=True)
     for minuto in range(1, 11):
         print(f"Minuto {minuto} de inactividad...", flush=True)
@@ -86,7 +85,7 @@ def simular_inactividad():
 
 
 def pedir_fecha_tupla():
-    """Solicita fecha dd/mm/aaaa (solo año 2026, mes 1-12, día 1-31) y retorna tupla."""
+    #Solicita fecha dd/mm/aaaa (solo año 2026, mes 1-12, día 1-31) y retorna tupla."""
     while True:
         texto_fecha = input("Ingresa la fecha de operación en 2026 (dd/mm/2026): ").strip()
         partes = texto_fecha.split("/")
@@ -122,13 +121,13 @@ def pedir_fecha_tupla():
 
 
 def formatear_fecha(fecha):
-    """Convierte la tupla (dia, mes, anio) a texto dd/mm/aaaa."""
+    #Convierte la tupla (dia, mes, anio) a texto dd/mm/aaaa."""
     dia, mes, anio = fecha
     return f"{dia:02d}/{mes:02d}/{anio}"
 
 
 def asegurar_archivo_base(nombre_archivo, fecha):
-    """Crea un archivo .txt base con la fecha en tupla si aún no existe."""
+    #Crea un archivo .txt base con la fecha en tupla si aún no existe."""
     destino = ruta_completa(nombre_archivo)
     if not os.path.exists(destino):
         try:
@@ -140,7 +139,7 @@ def asegurar_archivo_base(nombre_archivo, fecha):
 
 
 def listar_archivos_txt():
-    """Muestra y devuelve los archivos .txt en la carpeta del proyecto."""
+    #Muestra y devuelve los archivos .txt en la carpeta del proyecto."""
     try:
         archivos = [
             nombre for nombre in os.listdir(CARPETA_PROYECTO)
@@ -163,7 +162,7 @@ def listar_archivos_txt():
 
 
 def mostrar_contenido_archivo(nombre):
-    """Lee e imprime en pantalla el contenido de un archivo .txt."""
+    #Lee e imprime en pantalla el contenido de un archivo .txt.
     if not nombre.endswith(".txt"):
         nombre = nombre + ".txt"
 
@@ -184,7 +183,7 @@ def mostrar_contenido_archivo(nombre):
 
 
 def gestionar_archivos(fecha):
-    """Permite leer un archivo existente o crear uno nuevo con la fecha en tupla."""
+    #Permite leer un archivo existente o crear uno nuevo con la fecha en tupla.
     archivos = listar_archivos_txt()
     accion = input("Escribe 'L' para leer un archivo o 'C' para crear uno nuevo: ").strip().upper()
 
@@ -237,7 +236,7 @@ def gestionar_archivos(fecha):
 
 
 def anexar_registro(nombre_archivo, texto_registro, fecha):
-    """Agrega un registro al final de un archivo existente con la fecha en tupla."""
+    #Agrega un registro al final de un archivo existente con la fecha en tupla."""
     try:
         with open(ruta_completa(nombre_archivo), "a", encoding="utf-8") as archivo:
             archivo.write(f"[{formatear_fecha(fecha)} | Fecha={fecha}] {texto_registro}\n")
@@ -257,7 +256,7 @@ def anexar_registro(nombre_archivo, texto_registro, fecha):
 
 
 def calcular_importe_despacho(precio, cantidad):
-    """Calcula subtotal, descuento por volumen, IVA (16%) y total neto."""
+    #Calcula subtotal, descuento por volumen, IVA (16%) y total neto."""
     subtotal = precio * cantidad
 
     if cantidad >= 100:
@@ -276,7 +275,7 @@ def calcular_importe_despacho(precio, cantidad):
 
 
 def pedir_precio_valido():
-    """Bloquea el avance hasta ingresar un precio > 0 y <= 1000."""
+    #Bloquea el avance hasta ingresar un precio > 0 y <= 1000.
     while True:
         try:
             precio = float(input("Ingresa el precio del producto (máx. $1000): "))
@@ -296,7 +295,7 @@ def pedir_precio_valido():
 
 
 def pedir_stock_valido():
-    """Bloquea el avance hasta ingresar un stock entero entre 0 y 500."""
+    #Bloquea el avance hasta ingresar un stock entero entre 0 y 500.
     while True:
         try:
             stock = int(input("Ingresa el stock disponible (0 a 500 lotes): "))
@@ -312,7 +311,7 @@ def pedir_stock_valido():
 
 
 def pedir_cantidad_valida(stock):
-    """Bloquea el avance hasta ingresar una cantidad entre 1 y 500 que no supere el stock."""
+    #Bloquea el avance hasta ingresar una cantidad entre 1 y 500 que no supere el stock.
     if stock == 0:
         print("Advertencia: no hay stock disponible (0 lotes). No se puede despachar.", flush=True)
         return None
@@ -333,7 +332,7 @@ def pedir_cantidad_valida(stock):
 
 
 def registrar_despacho(fecha, usuario):
-    """Solicita precio, stock y cantidad bloqueando datos inválidos, calcula y guarda."""
+    #Solicita precio, stock y cantidad bloqueando datos inválidos, calcula y guarda.
     precio = pedir_precio_valido()
     stock = pedir_stock_valido()
     cantidad = pedir_cantidad_valida(stock)
@@ -386,7 +385,7 @@ def registrar_despacho(fecha, usuario):
 
 
 def mostrar_resumen(usuario, fecha, total, registro, ultimo_archivo):
-    """Muestra el resumen de la sesión y despliega en pantalla el archivo guardado."""
+    #Muestra el resumen de la sesión y despliega en pantalla el archivo guardado."""
     print("\n================ RESUMEN DE OPERACIÓN ================", flush=True)
     print(f"Operador: {usuario}", flush=True)
     print(f"Fecha activa (tupla): {fecha}", flush=True)
@@ -408,14 +407,14 @@ def mostrar_resumen(usuario, fecha, total, registro, ultimo_archivo):
 
 
 def dibujar_menu():
-    """Recorre la matriz MENU_KLUU y muestra las opciones en consola."""
+    #Recorre la matriz MENU_KLUU y muestra las opciones en consola."""
     print("\n=== KLUU FOOD SERVICES ===", flush=True)
     for fila in MENU_KLUU:
         print(f"{fila[0]}. {fila[1]}", flush=True)
 
 
 def main():
-    """Controla el flujo principal del programa."""
+    #Controla el flujo principal del programa."""
     while True:
         pantalla_carga(2)
         usuario = solicitar_usuario_bienvenida()

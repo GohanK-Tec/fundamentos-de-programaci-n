@@ -1,3 +1,5 @@
 Fecha: 25/11/2026 | Fecha=(25, 11, 2026)
 Bitácora de despachos KLUU FOOD SERVICES
 [23/11/2026 | Fecha=(23, 11, 2026)] Operador: Vani | Cant: 12 | Precio: $24.00 | Desc: $0.00 | IVA: $46.08 | Total: $334.08 | StockRest: 22
+[27/11/2026 | Fecha=(27, 11, 2026)] Operador: Gohan | Cant: 56 | Precio: $877.00 | Desc: $4911.20 | IVA: $7072.13 | Total: $51272.93 | StockRest: 67
+[27/11/2026 | Fecha=(27, 11, 2026)] Operador: Gohan | Cant: 32 | Precio: $98.00 | Desc: $156.80 | IVA: $476.67 | Total: $3455.87 | StockRest: 24

@@ -1,3 +1,5 @@
 Fecha: 26/11/2026 | Fecha=(26, 11, 2026)
 Descripción: compras del restaurente 5
 [26/11/2026 | Fecha=(26, 11, 2026)] Operador: Gohan | Cant: 2 | Precio: $900.00 | Desc: $0.00 | IVA: $288.00 | Total: $2088.00 | StockRest: 52
+[27/11/2026 | Fecha=(27, 11, 2026)] Operador: Gohan | Cant: 4 | Precio: $653.00 | Desc: $0.00 | IVA: $417.92 | Total: $3029.92 | StockRest: 17
+[27/11/2026 | Fecha=(27, 11, 2026)] Operador: Gohan | Cant: 24 | Precio: $90.00 | Desc: $0.00 | IVA: $345.60 | Total: $2505.60 | StockRest: 8

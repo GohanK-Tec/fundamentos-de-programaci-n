@@ -1,0 +1,4 @@
+Fecha: 21/12/2026 | Fecha=(21, 12, 2026)
+[21/12/2026 | Fecha=(21, 12, 2026)] Operador: Kojin | Cant: 200 | Precio: $460.00 | Desc: $13800.00 | IVA: $12512.00 | Total: $90712.00 | StockRest: 0
+[27/11/2026 | Fecha=(27, 11, 2026)] Operador: Gohan | Cant: 126 | Precio: $204.00 | Desc: $3855.60 | IVA: $3495.74 | Total: $25344.14 | StockRest: 74
+[27/11/2026 | Fecha=(27, 11, 2026)] Operador: Gohan | Cant: 68 | Precio: $76.00 | Desc: $516.80 | IVA: $744.19 | Total: $5395.39 | StockRest: 277
